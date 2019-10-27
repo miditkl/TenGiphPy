@@ -2,21 +2,23 @@ import os
 from distutils.core import setup
 
 
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
+version = '1.0.1'
+download_url = 'https://github.com/realSnosh/tenorpy/archive/1.0.1.tar.gz'
 
 try:
     setup(
         name='tenorpy',
-        version='1.0.0',
+        version=version,
         author='alpha_Snosh',
         description='API Wrapper for the Gif library Tenor. Join my server: https://discord.gg/uFdVUMH',
-        long_description=read('README.md'),
+        long_description=long_description,
         license='MIT',
         keywords='tenor, python, python3, api, wrapper, alphasnosh, snosh',
         url='https://github.com/realSnosh/tenorpy',
-        download_url='https://github.com/realSnosh/tenorpy/archive/1.0.0.tar.gz',
+        download_url=download_url,
         packages=['tenorpy'],
         install_requires=['requests'],
         classifiers=[
@@ -34,13 +36,13 @@ try:
 except:
     setup(
         name='tenorpy',
-        version='2.0.1',
+        version=version,
         author='alpha_Snosh',
         description='API Wrapper for the Gif library Tenor. Join my server: https://discord.gg/uFdVUMH',
         license='MIT',
         keywords='tenor, python, python3, api, wrapper, alphasnosh, snosh',
         url='https://github.com/realSnosh/tenorpy',
-        download_url='https://github.com/realSnosh/tenorpy/archive/1.0.0.tar.gz',
+        download_url=download_url,
         packages=['tenorpy'],
         install_requires=['requests'],
         classifiers=[
