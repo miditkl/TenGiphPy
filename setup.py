@@ -1,12 +1,14 @@
-import os
-from distutils.core import setup
+from setuptools import setup, find_packages
+from os import path
+from io import open
 
+here = path.abspath(path.dirname(__file__))
 
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-version = '1.0.1'
-download_url = 'https://github.com/realSnosh/tenorpy/archive/1.0.1.tar.gz'
+version = '1.0.3'
+download_url = 'https://github.com/realSnosh/tenorpy/archive/1.0.3.tar.gz'
 
 try:
     setup(
@@ -29,11 +31,12 @@ try:
             "Programming Language :: Python :: 3.4",
             "Programming Language :: Python :: 3.5",
             "Programming Language :: Python :: 3.6",
-            "Programming Language :: Python :: 3.7"
+            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: 3.8"
 
         ]
     )
-except:
+except Exception:
     setup(
         name='tenorpy',
         version=version,
@@ -53,7 +56,8 @@ except:
             "Programming Language :: Python :: 3.4",
             "Programming Language :: Python :: 3.5",
             "Programming Language :: Python :: 3.6",
-            "Programming Language :: Python :: 3.7"
+            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: 3.8"
 
         ]
     )
