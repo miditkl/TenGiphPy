@@ -2,7 +2,7 @@ import requests
 import json
 import random
 
-API_KEY = "J5UVWPVIM4A5"
+API_KEY = "LIVDSRZULELA"
 API_ENDPOINT = 'https://api.tenor.co/v1/'
 DEFAULT_SEARCH_LIMIT = 25
 SAFE_SEARCH = 'off'
