@@ -20,3 +20,5 @@ t = tenorpy.Tenor()
 print(t.random("GIFTAG"))
 # Will return a random GIF with the tag "GIFTAG"
 ````
+
+[Click here, if you want a sample script for the discord.py library](https://gist.github.com/realSnosh/58b78b8304a835e6d9d471c067b4b0df#file-sample_tenorpy_discordpy_commands_script-py)
