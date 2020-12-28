@@ -7,57 +7,53 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-version = '1.0.3'
-download_url = 'https://github.com/realSnosh/tenorpy/archive/1.0.3.tar.gz'
+package_name = 'TenGiphPy'
+author = 'Snosh'
+version = '2.0.0'
+desc = 'API Wrapper for the Gif library Tenor and Giphy. Join my server: https://discord.gg/uFdVUMH'
+kw = 'giphy, tenor, python, python3, api, wrapper, alphasnosh, snosh'
+download_url = 'https://github.com/realSnosh/TenGiphPy/archive/2.0.0.tar.gz'
+requirements = ['requests']
+classifiers = [
+            "Intended Audience :: Developers",
+            "Topic :: Software Development :: Build Tools",
+            "License :: OSI Approved :: MIT License",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.4",
+            "Programming Language :: Python :: 3.5",
+            "Programming Language :: Python :: 3.6",
+            "Programming Language :: Python :: 3.7",
+            "Programming Language :: Python :: 3.8",
+            "Programming Language :: Python :: 3.9"
+        ]
+
 
 try:
     setup(
-        name='tenorpy',
+        name=package_name,
         version=version,
-        author='alpha_Snosh',
-        description='API Wrapper for the Gif library Tenor. Join my server: https://discord.gg/uFdVUMH',
+        author=author,
+        description=desc,
         long_description=long_description,
         license='MIT',
-        keywords='tenor, python, python3, api, wrapper, alphasnosh, snosh',
-        url='https://github.com/realSnosh/tenorpy',
+        keywords=kw,
+        url='https://github.com/realSnosh/TenGiphPy',
         download_url=download_url,
-        packages=['tenorpy'],
-        install_requires=['requests'],
-        classifiers=[
-            "Intended Audience :: Developers",
-            "Topic :: Software Development :: Build Tools",
-            "License :: OSI Approved :: MIT License",
-            "Programming Language :: Python :: 3",
-            "Programming Language :: Python :: 3.4",
-            "Programming Language :: Python :: 3.5",
-            "Programming Language :: Python :: 3.6",
-            "Programming Language :: Python :: 3.7",
-            "Programming Language :: Python :: 3.8"
-
-        ]
+        packages=[f'{package_name}'],
+        install_requires=requirements,
+        classifiers=classifiers
     )
 except Exception:
     setup(
-        name='tenorpy',
+        name=package_name,
         version=version,
-        author='alpha_Snosh',
-        description='API Wrapper for the Gif library Tenor. Join my server: https://discord.gg/uFdVUMH',
+        author=author,
+        description=desc,
         license='MIT',
-        keywords='tenor, python, python3, api, wrapper, alphasnosh, snosh',
-        url='https://github.com/realSnosh/tenorpy',
+        keywords=kw,
+        url='https://github.com/realSnosh/TenGiphPy',
         download_url=download_url,
-        packages=['tenorpy'],
-        install_requires=['requests'],
-        classifiers=[
-            "Intended Audience :: Developers",
-            "Topic :: Software Development :: Build Tools",
-            "License :: OSI Approved :: MIT License",
-            "Programming Language :: Python :: 3",
-            "Programming Language :: Python :: 3.4",
-            "Programming Language :: Python :: 3.5",
-            "Programming Language :: Python :: 3.6",
-            "Programming Language :: Python :: 3.7",
-            "Programming Language :: Python :: 3.8"
-
-        ]
+        packages=[f'{package_name}'],
+        install_requires=requirements,
+        classifiers=classifiers
     )

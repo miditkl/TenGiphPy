@@ -1,12 +1,12 @@
-Tenorpy is a Python wrapper for the Tenor API.
+TenGiphPy is a Python wrapper for the Tenor and Giphy API.
 
 Installation
 ===============
 Clone Repository: ``python3 setup.py install``
 
-Install with pip: ``python3 -m pip install tenorpy``
+Install with pip: ``python3 -m pip install TenGiphPy``
 
-Update with pip: ``python3 -m pip install -U tenorpy``
+Update with pip: ``python3 -m pip install -U TenGiphPy``
 
 Usage
 =====
@@ -14,11 +14,13 @@ Usage
 
 To use:
 
-````python
-import tenorpy
-t = tenorpy.Tenor()
+```python
+import TenGiphPy
+t = TenGiphPy.Tenor(token='APITOKEN')
+g = TenGiphPy.Giphy(token='APITOKEN')
 print(t.random("GIFTAG"))
+print(g.random("GIFTAG"))
 # Will return a random GIF with the tag "GIFTAG"
-````
+```
 
-[Click here, if you want a sample script for the discord.py library](https://gist.github.com/realSnosh/58b78b8304a835e6d9d471c067b4b0df#file-sample_tenorpy_discordpy_commands_script-py)
+[Click here, if you want a sample script for the discord.py library](https://gist.github.com/realSnosh/3eae65975e09e3f60fbeeee393054cf2)
