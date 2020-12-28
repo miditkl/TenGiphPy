@@ -21,6 +21,7 @@ t = TenGiphPy.Tenor(token='APITOKEN')
 g = TenGiphPy.Giphy(token='APITOKEN')
 print(t.random("GIFTAG"))
 print(g.random(tag="GIFTAG")['data']['images']['downsized_large']['url'])
+# Will return a random GIF with the tag "GIFTAG"
 
 ```
 
