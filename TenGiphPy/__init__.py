@@ -38,6 +38,9 @@ class Giphy(object):
         endpoint = f"/{attr}"
         return functools.partial(self.Post, endpoint)
 
+    async def arandom(self, tag):
+        return self.Post(endpoint=f'/random', tag=tag)
+
 
 class TenorImage(object):
     def __init__(self, data=None):
@@ -75,6 +78,21 @@ class Tenor(object):
         return results
 
     def random(self, tag):
+        search_results = self.search(tag=tag)
+        random_entry = random.choice(search_results['results'])
+        gif = random_entry['media'][0]['gif']['url']
+        return gif
+
+    async def asearch(self, tag, safesearch=False, limit=None):
+        params = {'tag': tag}
+        if safesearch:
+            params['safesearch'] = safesearch
+        if limit:
+            params['limit'] = limit
+        results = self._get(**params)
+        return results
+
+    async def arandom(self, tag):
         search_results = self.search(tag=tag)
         random_entry = random.choice(search_results['results'])
         gif = random_entry['media'][0]['gif']['url']

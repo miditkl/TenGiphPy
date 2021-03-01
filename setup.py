@@ -9,18 +9,15 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 package_name = 'TenGiphPy'
 author = 'Snosh'
-version = '2.0.0'
+version = '2.5.0'
 desc = 'API Wrapper for the Gif library Tenor and Giphy. Join my server: https://discord.gg/uFdVUMH'
 kw = 'giphy, tenor, python, python3, api, wrapper, alphasnosh, snosh'
-download_url = 'https://github.com/realSnosh/TenGiphPy/archive/2.0.0.tar.gz'
+download_url = 'https://github.com/realSnosh/TenGiphPy/archive/2.5.0.tar.gz'
 requirements = ['requests']
 classifiers = [
             "Intended Audience :: Developers",
             "Topic :: Software Development :: Build Tools",
             "License :: OSI Approved :: MIT License",
-            "Programming Language :: Python :: 3",
-            "Programming Language :: Python :: 3.4",
-            "Programming Language :: Python :: 3.5",
             "Programming Language :: Python :: 3.6",
             "Programming Language :: Python :: 3.7",
             "Programming Language :: Python :: 3.8",
