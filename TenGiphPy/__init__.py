@@ -60,18 +60,18 @@ class Tenor(object):
         self.api_key = token
 
     def _get(self, **params):
-        params['api_key'] = self.api_key
+        params['key'] = self.api_key
 
-        response = requests.get('https://api.tenor.co/v1/search', params=params)
+        response = requests.get('https://g.tenor.com/v2/search', params=params)
 
-        results = json.loads(response.text)
+        results = json.loads(response.content)
 
         return results
 
     def search(self, tag, safesearch=False, limit=None):
-        params = {'tag': tag}
+        params = {'q': tag}
         if safesearch:
-            params['safesearch'] = safesearch
+            params['contentfilter'] = safesearch
         if limit:
             params['limit'] = limit
         results = self._get(**params)
@@ -80,13 +80,13 @@ class Tenor(object):
     def random(self, tag):
         search_results = self.search(tag=tag)
         random_entry = random.choice(search_results['results'])
-        gif = random_entry['media'][0]['gif']['url']
+        gif = random_entry['media_formats']['gif']['url']
         return gif
 
     async def asearch(self, tag, safesearch=False, limit=None):
-        params = {'tag': tag}
+        params = {'q': tag}
         if safesearch:
-            params['safesearch'] = safesearch
+            params['contentfilter'] = safesearch
         if limit:
             params['limit'] = limit
         results = self._get(**params)
@@ -95,5 +95,5 @@ class Tenor(object):
     async def arandom(self, tag):
         search_results = self.search(tag=tag)
         random_entry = random.choice(search_results['results'])
-        gif = random_entry['media'][0]['gif']['url']
+        gif = random_entry['media_formats']['gif']['url']
         return gif
